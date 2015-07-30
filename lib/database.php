@@ -21,7 +21,7 @@ class Database
         return $this->connection;
     }
 
-    public function select($sql, $inputParameters = null)
+    public function execute($sql, $inputParameters = null, $post = 'fetch_assoc')
     {
         if (isset($sql)) {
             $sql = $this->connection->prepare($sql);
@@ -30,8 +30,15 @@ class Database
             } else {
                 $sql->execute($inputParameters);
             }
-            $result = $sql->fetchAll(\PDO::FETCH_ASSOC);
-            return $result;
+            if ($post == 'fetch_assoc') {
+                $result = $sql->fetchAll(\PDO::FETCH_ASSOC);
+                return $result;
+            } elseif ($post == 'fetch_id') {
+                return ['id'=>$this->connection->lastInsertId()];
+            } else {
+                return true;
+            }
+            
         } else {
             return false;
         }
