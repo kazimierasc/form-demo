@@ -8,8 +8,6 @@ In order to run this fullstack setup the following system requirements must be m
 
 * A LAMP/WAMP/MAMP stack
 
-* Node.js with npm (for Grunt to work)
-
 * Bower (to get a couple of packages)
 
 * Grunt CLI (for an automated build process)
