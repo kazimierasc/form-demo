@@ -16,14 +16,14 @@
 </head>
 
 <body>
-    <section class="wrapper">
+    <section id="wrapper">
         <aside>
         <h1>Pridėk apgyvendinimą</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua.</p>
         </aside>
 
-        <div class="formArea">
+        <div id="formArea">
             <form>
                 <p>Apdyvendinimas skirtas:
                 <input type="radio" name="target" value="all" id="target_all"/>
@@ -34,52 +34,65 @@
                 <label for="target_foreign">Užsieniečiams</label>
                 </p>
 
-                <div>
-                    <label for="propertyType">Nuomoju:</label>
-                    <select name="propertyType" id="propertyType">
-                        <option value="room">Kambarį</option>
-                        <option value="apartment">Butą</option>
-                        <option value="house">Namą</option>
-                    </select>
+                <div class="horizontalLine"></div>
+
+                <div id="mainForm">
+                    <div class="row">
+                        <div class="field half">
+                            <label for="propertyType">Nuomoju:</label>
+                            <select name="propertyType" id="propertyType">
+                                <option value="room">Kambarį</option>
+                                <option value="apartment">Butą</option>
+                                <option value="house">Namą</option>
+                            </select>
+                        </div>
+
+                        <div class="field half">
+                            <label for="city">Miestas:</label>
+                            <select name="city" id="city">
+                                <option value="Vilniuje">Vilniuje</option>
+                                <option value="Kaune">Kaune</option>
+                                <option value="Klaipėdoje">Klaipėdoje</option>
+                                <option value="Šiauliuose">Šiauliuose</option>
+                                <option value="Panevėžyje">Panevėžyje</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p class="caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                    <div class="row">
+                        <div class="field one-third">
+                            <label for="capacity">Kiek žmonių telpa?</label>
+                            <select name="capacity" id="capacity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3-4">3-4</option>
+                                <option value="5-7">5-7</option>
+                                <option value="8-12">8-12</option>
+                            </select>
+                        </div>
+
+                        <div class="field two-thirds">
+                            <label for="address">Adresas:</label>
+                            <input type="hidden" name="coordinates" id="coordinates"/>
+                            <input type="text" name="address" id="address"/>
+                            <p class="caption">Pvz. Žalgirio 110, Vilnius</p>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="description">Aprašymas:</label>
+                        <div>
+                            <textarea name="description"></textarea>
+                        </div>
+                    </div>
+
                 </div>
 
-                <div>
-                    <label for="city">Miestas:</label>
-                    <select name="city" id="city">
-                        <option value="Vilniuje">Vilniuje</option>
-                        <option value="Kaune">Kaune</option>
-                        <option value="Klaipėdoje">Klaipėdoje</option>
-                        <option value="Šiauliuose">Šiauliuose</option>
-                        <option value="Panevėžyje">Panevėžyje</option>
-                    </select>
+                <div id="mapArea" class="">
                 </div>
 
-                <p class="caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-                <div>
-                    <label for="capacity">Kiek žmonių telpa?</label>
-                    <select name="capacity" id="capacity">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3-4">3-4</option>
-                        <option value="5-7">5-7</option>
-                        <option value="8-12">8-12</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label for="address">Adresas:</label>
-                    <input type="hidden" name="coordinates" id="coordinates"/>
-                    <input type="text" name="address" id="address"/>
-                    <p class="caption">Pvz. Žalgirio 110, Vilnius</p>
-                </div>
-
-                <div>
-                    <label for="description">Aprašymas:</label>
-                    <textarea></textarea>
-                </div>
-
-                <div>
+                <div class="clear" id="buttons">
                     <input type="submit" value="Išsaugoti" />
                     <input type="reset" value="Atšaukti" />
                 </div>
