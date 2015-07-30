@@ -1,0 +1,14 @@
+{
+    "name": "kazimierasc/form-demo",
+    "description": "A simple form demonstration.",
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^2.3"
+    },
+    "authors": [
+        {
+            "name": "Kazimieras",
+            "email": "kazimierasc@gmail.com"
+        }
+    ],
+    "require": {}
+}
